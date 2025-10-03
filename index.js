@@ -19,6 +19,7 @@ app.use("/auth", authRoutes);
 app.use("/api/timers", timersRoutes);
 
 // Порт
+const port = process.env.PORT || process.env.DB_PORT;
 const host = process.env.MONGODB_URI;
 
 // Запускаем HTTP-сервер
