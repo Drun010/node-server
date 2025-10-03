@@ -24,7 +24,8 @@ const host = process.env.DB_HOST;
 
 // Запускаем HTTP-сервер
 const server = app.listen(port, () => {
-  console.log(`🚀 Server is running on ${host}`);
+  console.log(`🚀 Server is running on ${host + port}`);
+  console.log(server)
 });
 
 // Подключаем WebSocket
