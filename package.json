@@ -12,10 +12,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "s": "node migrate.js && node index.js",
-    "start": "docker-compose up -d && node migrate.js && node index.js",
-    "dev": "docker-compose up -d && node migrate.js && nodemon index.js -e js,njk",
-    "stop": "docker-compose down",
+    "start": "node migrate.js && node index.js",
+    "dev": "node migrate.js && nodemon index.js -e js,njk",
     "test": "echo \"Tests passed\" && exit 0",
     "prettify": "prettier --write",
     "prettify:all": "prettier --write \"./**/*.{js,json}\"",
