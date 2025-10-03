@@ -19,11 +19,11 @@ app.use("/auth", authRoutes);
 app.use("/api/timers", timersRoutes);
 
 // Порт
-const port = process.env.PORT || 3000;
+const host = process.env.MONGODB_URI;
 
 // Запускаем HTTP-сервер
 const server = app.listen(port, () => {
-  console.log(`🚀 Server is running on http://localhost:${port}`);
+  console.log(`🚀 Server is running on ${host}`);
 });
 
 // Подключаем WebSocket
