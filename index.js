@@ -20,7 +20,7 @@ app.use("/api/timers", timersRoutes);
 
 // Порт
 const port = process.env.PORT || process.env.DB_PORT;
-const host = process.env.DB_HOST;
+const host = 'loaclhost';
 
 // Запускаем HTTP-сервер
 const server = app.listen(port, host, () => {
