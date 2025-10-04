@@ -18,13 +18,12 @@ app.use(express.json());
 app.use("/auth", authRoutes);
 app.use("/api/timers", timersRoutes);
 
-// Порт
-const port = process.env.PORT || process.env.DB_PORT;
-const host = 'localhost';
+// Запускаем HTTP-сервер
+const port = process.env.PORT || 3000;
 
 // Запускаем HTTP-сервер
-const server = app.listen(port, host, () => {
-  console.log(`🚀 Server is running on http://${host + ':' + port}`);
+const server = app.listen(port, () => {
+  console.log(`🚀 Server is running on http://localhost:${port}`);
 });
 
 // Подключаем WebSocket
