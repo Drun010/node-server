@@ -9,7 +9,6 @@ export const clients = new Map();
 // Основная функция для подключения WebSocket к серверу
 export function setupWebSocket(server) {
   const wss = new WebSocketServer({ server });
-  console.log(wss)
 
   wss.on("connection", async (ws, req) => {
     let sessionId = null;
